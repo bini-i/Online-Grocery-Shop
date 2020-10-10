@@ -18,5 +18,88 @@
   font-family: "Helvetica-Neue-Bold";
   src: url(./../fonts/HelveticaNeue-Bold.otf);
   font-style: normal; }
+/*
+    CSS Reset
+*/
+html,
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+a,
+input,
+ul,
+li,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent; }
+
+li {
+  list-style: none; }
+
+/*
+  Global Setting and methods
+*/
+a {
+  cursor: pointer; }
+
+nav ul li:not(:first-child) a:hover {
+  color: #d35266; }
+
+/*
+  Header section
+*/
+header {
+  font-size: 10px;
+  font-family: "Gotham-Bold", sans-serif; }
+  header nav {
+    height: 35px;
+    background: #383838; }
+    header nav ul {
+      height: 100%;
+      padding-left: 3.5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      header nav ul li {
+        font-size: 1em;
+        padding-right: 4vw;
+        color: #888; }
+        header nav ul li i {
+          padding-right: 1vw; }
+      header nav ul .logo {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 600;
+        position: relative; }
+        header nav ul .logo::before {
+          display: block;
+          content: "";
+          background: url("./../img/icont.png") no-repeat;
+          background-size: contain;
+          height: 1.8em;
+          width: 1.8em;
+          position: absolute;
+          left: -28px;
+          bottom: -5px; }
+      header nav ul .login {
+        font-family: "Gotham-Bold", sans-serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+        background: #d35266;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 2px;
+        height: auto;
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */

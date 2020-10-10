@@ -1,0 +1,30 @@
+/*
+  Global Setting and methods
+*/
+@mixin flex($dir:row, $justify:center, $align:center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($weight: 400) {
+  font-family: $font-Goth-Bold;
+  font-weight: $weight;
+  font-size: 0.8rem;
+  background: $color-Cabaret;
+  color: $color-white;
+  padding: 5px 15px;
+  border-radius: 2px;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+nav {
+  ul li:not(:first-child) a:hover {
+    color: $color-Cabaret;
+  }
+}

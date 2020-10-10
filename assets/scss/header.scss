@@ -1,0 +1,64 @@
+/*
+  Header section
+*/
+// body {
+//   max-width: 200px;
+//   overflow: hidden;
+// }
+
+header {
+  font-size: 10px;
+  font-family: $font-Goth-Bold;
+
+  nav {
+    height: 35px;
+    background: $color-Eclipse;
+
+    ul {
+      height: 100%;
+      padding-left: 3.5em;
+
+      @include flex();
+
+      li {
+        font-size: 1em;
+        padding-right: 4vw;
+        color: $color-Grey;
+
+        a {
+          // white-space: nowrap;
+          // overflow: hidden;
+        }
+
+        i {
+          padding-right: 1vw;
+        }
+      }
+
+      .logo {
+        color: $color-white;
+        font-size: 1.2em;
+        font-weight: 600;
+        position: relative;
+
+        &::before {
+          display: block;
+          content: "";
+          background: url("./../img/icont.png") no-repeat;
+          background-size: contain;
+          height: 1.8em;
+          width: 1.8em;
+          position: absolute;
+          left: -28px;
+          bottom: -5px;
+        }
+      }
+
+      .login {
+        @include button();
+
+        display: none;
+      }
+    }
+  }
+}

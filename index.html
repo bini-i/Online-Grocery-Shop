@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Fresh Grocery | Online Grocery Shop</title>
-  <link rel="icon" href="./assets/img/icont.png"/>
+  <link rel="icon" href="./assets/img/icont.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <!-- fontawesome script -->
   <script src="https://kit.fontawesome.com/2bce053742.js" crossorigin="anonymous"></script>
@@ -44,15 +44,21 @@
         </li>
       </ul>
     </nav>
+    <div class="overlay">
+      <section class="banner">
+        <h1 class="title">Zattix</h1>
+        <p class="desc">Buying and Selling couldn't be simpler than this!</p>
+        <input class="search" type="text" name="search" placeholder="What are you looking for ?">
+      </section>
+    </div>
   </header>
 
   <main>
     <!-- Catagory section -->
     <section class="category">
       <h2 class="title fruits">Fruits and Vegetables</h2>
-      <p>Vegetables, Fruits, Frozen Alternatives, Fresh Herbs, Salad Kits ... </p>
+      <p class="category-desc">Vegetables, Fruits, Frozen Alternatives, Fresh Herbs, Salad Kits</p>
     </section>
-
     <!-- Container for grocery items -->
     <article class="container">
       <section class="item">
@@ -134,12 +140,12 @@
         </div>
       </section>
     </article>
-
+    <!-- Catagory section  -->
     <section class="category">
       <h2 class="title meats">Meat and Seafoods</h2>
-      <p>Chicken, Fillets, Salmon ...</p>
+      <p class="category-desc">Chicken, Fillets, Salmon</p>
     </section>
-
+    <!-- Container for grocery items -->
     <article class="container">
       <section class="item">
         <a class="item-img" href="#">
@@ -225,7 +231,9 @@
   <footer>
     <div class="top">
       <div class="logo">
-        Fresh Grocery
+        <a href="#">
+          Fresh Grocery
+        </a>
       </div>
       <div class="social">
         <p>Connect with us</p>

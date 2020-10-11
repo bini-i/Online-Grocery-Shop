@@ -54,15 +54,19 @@ a {
 nav ul li:not(:first-child) a:hover {
   color: #d35266; }
 
+body {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 /*
   Header section
 */
 header {
   font-size: 10px;
-  font-family: "Gotham-Bold", sans-serif; }
+  font-family: "Helvetica-Neue-Bold", sans-serif; }
   header nav {
-    height: 35px;
-    background: #383838; }
+    background: #383838;
+    padding: 1em 0; }
     header nav ul {
       height: 100%;
       padding-left: 0.5em;
@@ -72,38 +76,82 @@ header {
       align-items: center;
       flex-wrap: wrap; }
       header nav ul li {
-        font-size: 1.1em;
-        padding-right: 3vw;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        padding-right: 2vw;
         color: #888; }
+        @media screen and (min-width: 768px) {
+          header nav ul li {
+            font-size: 1em;
+            padding-right: 3.5vw; } }
         header nav ul li i {
           padding-right: 1vw; }
       header nav ul .logo {
-        color: #fff;
-        font-weight: 600;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        font-size: 1.23em; }
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2em; }
         header nav ul .logo::before {
           display: block;
           content: "";
           background: url("./../img/icont.png") no-repeat;
           background-size: contain;
-          height: 1.8em;
-          width: 1.8em;
+          height: 1.6em;
+          width: 1.6em;
           padding-right: 0.5em; }
       header nav ul .login {
-        font-family: "Gotham-Bold", sans-serif;
-        font-weight: 400;
-        font-size: 0.8rem;
+        font-family: "Helvetica-Neue-Bold", sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
         background: #d35266;
         color: #fff;
-        padding: 5px 15px;
+        padding: 0.5rem 0.9rem;
         border-radius: 2px;
-        height: auto;
-        display: none; }
+        height: auto; }
+        header nav ul .login,
+        header nav ul .login button {
+          cursor: pointer; }
+        @media screen and (max-width: 767px) {
+          header nav ul .login {
+            display: none; } }
+  header .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    color: #fff;
+    background-color: #d35266;
+    opacity: 0.85; }
+    @media screen and (max-width: 767px) {
+      header .banner {
+        display: none; } }
+    header .banner .title {
+      font-weight: 600;
+      font-size: 2.5rem;
+      text-transform: uppercase; }
+    header .banner .desc {
+      padding-bottom: 1.5rem;
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      font-family: "Helvetica-Neue-Medium", sans-serif; }
+    header .banner .search {
+      font-size: 0.8rem;
+      color: black;
+      background: #fff;
+      padding: 0.6rem 0.3rem;
+      padding-right: 1.5rem;
+      border-radius: 4px; }
+  header .overlay {
+    background-image: url(./../img/banner.jpg);
+    background-position: 50% 170%;
+    background-size: cover;
+    background-attachment: fixed; }
 
 .category {
   display: flex;
@@ -113,8 +161,7 @@ header {
   flex-wrap: wrap;
   height: 40px;
   box-sizing: border-box;
-  padding-left: 3vw;
-  padding-top: 0.8em;
+  padding: 0.8em 3vw 0;
   border-bottom: solid 1px #888;
   background: #f4f5f7;
   font-family: "Gotham-Bold", sans-serif;
@@ -122,12 +169,16 @@ header {
   color: #888; }
   .category .title {
     font-weight: 600;
-    padding-right: 1.5em;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap; }
+  .category .category-desc {
+    padding-left: 3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
   .category .fruits::before {
     background: url("./../img/vegetable.jpg");
     content: "";
@@ -174,7 +225,8 @@ header {
     flex-wrap: wrap;
     font-size: 1em; }
     .container .item .item-img img {
-      width: 100%; }
+      width: 100%;
+      height: 95px; }
     .container .item .item-title {
       font-family: "Gotham-Bold", sans-serif;
       font-weight: 600;
@@ -197,11 +249,11 @@ header {
         color: #d35266; }
 
 footer {
-  background: #383838;
-  padding: 1em;
-  font-family: "Gotham-Bold", sans-serif;
+  font-family: "Helvetica-Neue-Medium", sans-serif;
   font-size: 14px;
-  color: #fff; }
+  padding: 1em;
+  background: #fff;
+  color: #888; }
   footer .top {
     display: flex;
     flex-direction: column;
@@ -209,9 +261,24 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap; }
     footer .top .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
       color: #fff;
       font-weight: 600;
-      color: #d35266; }
+      font-size: 1.2em;
+      font-size: 1.1em;
+      color: #888; }
+      footer .top .logo::before {
+        display: block;
+        content: "";
+        background: url("./../img/icont.png") no-repeat;
+        background-size: contain;
+        height: 1.6em;
+        width: 1.6em;
+        padding-right: 0.5em; }
     footer .top .social p {
       padding: 0.4em 0; }
     footer .top .social i {

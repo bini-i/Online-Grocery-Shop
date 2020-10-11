@@ -1,9 +1,9 @@
 footer {
-  background: $color-Eclipse;
-  padding: 1em;
-  font-family: $font-Goth-Bold;
+  font-family: $font-Helv-Medium;
   font-size: 14px;
-  color: $color-white;
+  padding: 1em;
+  background: $color-white;
+  color: $color-Grey;
 
   .top {
     @include flex(column, center, flex-start);
@@ -11,8 +11,8 @@ footer {
     .logo {
       @include logo;
 
-      color: $color-Cabaret;
-      // font-size: 1em;
+      font-size: 1.1em;
+      color: $color-Grey;
     }
 
     .social {

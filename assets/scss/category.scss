@@ -3,8 +3,7 @@
 
   height: 40px;
   box-sizing: border-box;
-  padding-left: 3vw;
-  padding-top: 0.8em;
+  padding: 0.8em 3vw 0;
   border-bottom: solid 1px $color-Grey;
   background: $color-Grey-light;
   font-family: $font-Goth-Bold;
@@ -13,9 +12,15 @@
 
   .title {
     font-weight: 600;
-    padding-right: 1.5em;
 
     @include flex(row, flex-start, center);
+  }
+
+  .category-desc {
+    padding-left: 3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .fruits::before {

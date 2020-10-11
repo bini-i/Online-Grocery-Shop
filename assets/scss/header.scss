@@ -1,18 +1,14 @@
 /*
   Header section
 */
-// body {
-//   max-width: 200px;
-//   overflow: hidden;
-// }
 
 header {
   font-size: 10px;
-  font-family: $font-Goth-Bold;
+  font-family: $font-Helv-Bold;
 
   nav {
-    height: 35px;
     background: $color-Eclipse;
+    padding: 1em 0;
 
     ul {
       height: 100%;
@@ -21,9 +17,15 @@ header {
       @include flex();
 
       li {
-        font-size: 1.1em;
-        padding-right: 3vw;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        padding-right: 2vw;
         color: $color-Grey;
+
+        @include breakpoint ($desktop-screen) {
+          font-size: 1em;
+          padding-right: 3.5vw;
+        }
 
         i {
           padding-right: 1vw;
@@ -32,26 +34,63 @@ header {
 
       .logo {
         @include logo;
-        @include flex(row, flex-start, center);
-
-        font-size: 1.23em;
-
-        &::before {
-          display: block;
-          content: "";
-          background: url("./../img/icont.png") no-repeat;
-          background-size: contain;
-          height: 1.8em;
-          width: 1.8em;
-          padding-right: 0.5em;
-        }
       }
 
       .login {
         @include button();
 
-        display: none;
+        &,
+        button {
+          cursor: pointer;
+        }
+
+        @include breakpoint($mobile-screen) {
+          display: none;
+        }
       }
     }
+  }
+
+  .banner {
+    @include breakpoint($mobile-screen) {
+      display: none;
+    }
+
+    @include flex(column, center, center);
+
+    padding: 2em;
+    color: $color-white;
+    background-color: $color-Cabaret;
+    opacity: 0.85;
+
+    .title {
+      font-weight: 600;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    .desc {
+      padding-bottom: 1.5rem;
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      font-family: $font-Helv-Medium;
+    }
+
+    .search {
+      font-size: 0.8rem;
+      color: black;
+      background: $color-white;
+      padding: 0.6rem 0.3rem;
+      padding-right: 1.5rem;
+      // border: solid 1px $color-Grey;
+      border-radius: 4px;
+    }
+  }
+
+  .overlay {
+    background-image: url(./../img/banner.jpg);
+    background-position: 50% 170%;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }

@@ -1,0 +1,36 @@
+footer {
+  background: $color-Eclipse;
+  padding: 1em;
+  font-family: $font-Goth-Bold;
+  font-size: 14px;
+  color: $color-white;
+
+  .top {
+    @include flex(column, center, flex-start);
+
+    .logo {
+      @include logo;
+
+      color: $color-Cabaret;
+      // font-size: 1em;
+    }
+
+    .social {
+      p {
+        padding: 0.4em 0;
+      }
+
+      i {
+        padding-right: 0.4em;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      border-top: solid 1px $color-Grey;
+      margin-top: 0.3em;
+      padding-top: 0.3em;
+      font-size: 0.8em;
+    }
+  }
+}

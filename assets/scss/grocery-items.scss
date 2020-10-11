@@ -1,0 +1,51 @@
+.container {
+  background-color: $color-Grey-light;
+  padding: 1.5em 1.2em 1em;
+  font-size: 14px;
+
+  @include flex (row, flex-start, center);
+
+  .item {
+    width: 95px;
+    padding: 1em;
+    margin-bottom: 1.2em;
+    margin-right: 1.2em;
+    background: white;
+    overflow: hidden;
+
+    @include flex(column, flex-start, flex-start);
+
+    font-size: 1em;
+
+    .item-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .item-title {
+      font-family: $font-Goth-Bold;
+      font-weight: 600;
+      padding-top: 0.3em;
+    }
+
+    .item-desc {
+      font-family: $font-Helv-Light;
+      font-size: 0.8em;
+      padding: 0.3em 0;
+    }
+
+    .item-foot {
+      width: 100%;
+      color: $color-Grey;
+
+      @include flex(row, space-between, center);
+
+      .item-price {
+        font-family: $font-Helv-Bold;
+        font-weight: 600;
+        color: $color-Cabaret;
+      }
+    }
+  }
+}

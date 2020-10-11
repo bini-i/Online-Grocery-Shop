@@ -6,6 +6,7 @@
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
+  flex-wrap: wrap;
 }
 
 @mixin button($weight: 400) {
@@ -17,6 +18,23 @@
   padding: 5px 15px;
   border-radius: 2px;
   height: auto;
+}
+
+@mixin icon-circular {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 60% 20%;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-size: 3em 3em;
+  margin-right: 1em;
+}
+
+@mixin logo {
+  color: $color-white;
+  font-weight: 600;
 }
 
 a {

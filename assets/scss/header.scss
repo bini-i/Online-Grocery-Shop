@@ -16,19 +16,14 @@ header {
 
     ul {
       height: 100%;
-      padding-left: 3.5em;
+      padding-left: 0.5em;
 
       @include flex();
 
       li {
-        font-size: 1em;
-        padding-right: 4vw;
+        font-size: 1.1em;
+        padding-right: 3vw;
         color: $color-Grey;
-
-        a {
-          // white-space: nowrap;
-          // overflow: hidden;
-        }
 
         i {
           padding-right: 1vw;
@@ -36,10 +31,10 @@ header {
       }
 
       .logo {
-        color: $color-white;
-        font-size: 1.2em;
-        font-weight: 600;
-        position: relative;
+        @include logo;
+        @include flex(row, flex-start, center);
+
+        font-size: 1.23em;
 
         &::before {
           display: block;
@@ -48,9 +43,7 @@ header {
           background-size: contain;
           height: 1.8em;
           width: 1.8em;
-          position: absolute;
-          left: -28px;
-          bottom: -5px;
+          padding-right: 0.5em;
         }
       }
 

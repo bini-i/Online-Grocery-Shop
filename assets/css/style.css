@@ -55,7 +55,7 @@ nav ul li:not(:first-child) a:hover {
   color: #d35266; }
 
 .wrapper {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto; }
   @media screen and (max-width: 767px) {
     .wrapper {
@@ -249,6 +249,7 @@ header {
     .container .item .item-title {
       font-family: "Gotham-Bold", sans-serif;
       font-weight: 600;
+      font-size: 0.95em;
       padding-top: 0.3em; }
     .container .item .item-desc {
       font-family: "Helvetica-Neue-Light", sans-serif;
@@ -369,19 +370,18 @@ footer {
         flex-direction: row; } }
     .search-container .search-item .item-img {
       overflow: hidden;
+      min-width: 200px;
       height: 150px;
       display: grid;
       place-content: center; }
-      @media screen and (min-width: 768px) {
-        .search-container .search-item .item-img {
-          width: 525px; } }
     .search-container .search-item .item-detail {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
-      padding: 1.2em; }
+      padding: 1.2em;
+      flex-grow: 1; }
       .search-container .search-item .item-detail .item-title {
         font-weight: 600;
         font-size: 0.9em; }

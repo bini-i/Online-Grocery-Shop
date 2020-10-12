@@ -24,19 +24,17 @@
 
     .item-img {
       overflow: hidden;
+      min-width: 200px;
       height: 150px;
 
       @include center-content;
-
-      @include breakpoint($desktop-screen) {
-        width: 525px;
-      }
     }
 
     .item-detail {
       @include flex(column, space-between, flex-start);
 
       padding: 1.2em;
+      flex-grow: 1;
 
       .item-title {
         font-weight: 600;

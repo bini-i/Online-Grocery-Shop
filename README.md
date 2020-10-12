@@ -6,7 +6,7 @@
 
 ![screenshot](./assets/img/app_screenshot2.png)
 
-This project is made based on the design template made by Mohammed Awad (https://www.behance.net/gallery/24796463/ZATTIX)
+This project is the final capstone project for HTML/CSS curriculum at Microverse made based on the design template made by Mohammed Awad (https://www.behance.net/gallery/24796463/ZATTIX)
 
 It consists of the following components: 
 - Two webpages (main and search-result)

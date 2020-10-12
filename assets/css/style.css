@@ -54,9 +54,12 @@ a {
 nav ul li:not(:first-child) a:hover {
   color: #d35266; }
 
-body {
-  max-width: 1100px;
+.wrapper {
+  max-width: 1400px;
   margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .wrapper {
+      padding-top: 39px; } }
 
 /*
   Header section
@@ -66,7 +69,10 @@ header {
   font-family: "Helvetica-Neue-Bold", sans-serif; }
   header nav {
     background: #383838;
-    padding: 1em 0; }
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5; }
     header nav ul {
       height: 100%;
       padding-left: 0.5em;
@@ -103,6 +109,8 @@ header {
           height: 1.6em;
           width: 1.6em;
           padding-right: 0.5em; }
+      header nav ul .active {
+        color: #d35266; }
       header nav ul .login {
         font-family: "Helvetica-Neue-Bold", sans-serif;
         font-weight: 600;
@@ -118,40 +126,51 @@ header {
         @media screen and (max-width: 767px) {
           header nav ul .login {
             display: none; } }
-  header .banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2em;
-    color: #fff;
-    background-color: #d35266;
-    opacity: 0.85; }
-    @media screen and (max-width: 767px) {
-      header .banner {
-        display: none; } }
-    header .banner .title {
-      font-weight: 600;
-      font-size: 2.5rem;
-      text-transform: uppercase; }
-    header .banner .desc {
-      padding-bottom: 1.5rem;
-      font-size: 0.8rem;
-      text-transform: capitalize;
-      font-family: "Helvetica-Neue-Medium", sans-serif; }
-    header .banner .search {
-      font-size: 0.8rem;
-      color: black;
-      background: #fff;
-      padding: 0.6rem 0.3rem;
-      padding-right: 1.5rem;
-      border-radius: 4px; }
   header .overlay {
     background-image: url(./../img/banner.jpg);
     background-position: 50% 170%;
     background-size: cover;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    padding-top: 48px; }
+    header .overlay .banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2em;
+      color: #fff;
+      background-color: #d35266;
+      opacity: 0.85; }
+      header .overlay .banner .title {
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: uppercase; }
+      header .overlay .banner .desc {
+        padding-bottom: 1.5rem;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-family: "Helvetica-Neue-Medium", sans-serif; }
+      header .overlay .banner .search {
+        font-size: 0.8rem;
+        color: black;
+        border-radius: 7px;
+        overflow: hidden; }
+        header .overlay .banner .search .search-input,
+        header .overlay .banner .search .search-but {
+          background: #fff;
+          padding: 0.6rem 0.3rem;
+          padding-right: 1.5rem; }
+        header .overlay .banner .search .search-but {
+          background: #383838;
+          color: #f4f5f7;
+          padding: 0.6rem 0.8rem;
+          cursor: pointer; }
+          header .overlay .banner .search .search-but:hover {
+            opacity: 1; }
+    @media screen and (max-width: 767px) {
+      header .overlay {
+        display: none; } }
 
 .category {
   display: flex;
@@ -289,5 +308,129 @@ footer {
       margin-top: 0.3em;
       padding-top: 0.3em;
       font-size: 0.8em; }
+
+.banner-s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2em;
+  color: #fff;
+  background-color: #d35266;
+  opacity: 0.85; }
+  .banner-s .title {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .banner-s .desc {
+    padding-bottom: 1.5rem;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    font-family: "Helvetica-Neue-Medium", sans-serif; }
+  .banner-s .search {
+    font-size: 0.8rem;
+    color: black;
+    border-radius: 7px;
+    overflow: hidden; }
+    .banner-s .search .search-input,
+    .banner-s .search .search-but {
+      background: #fff;
+      padding: 0.6rem 0.3rem;
+      padding-right: 1.5rem; }
+    .banner-s .search .search-but {
+      background: #888;
+      color: #f4f5f7;
+      padding: 0.6rem 0.8rem;
+      cursor: pointer; }
+
+.search-num {
+  background: #f4f5f7;
+  color: #888;
+  font-family: "Gotham-Bold", sans-serif;
+  font-size: 0.75em;
+  padding: 1.2em 1.2em; }
+
+.search-container {
+  background: #f4f5f7;
+  color: #888;
+  font-family: "Gotham-Bold", sans-serif; }
+  .search-container .search-item {
+    padding: 1.2em;
+    border-top: solid 1px #888;
+    border-bottom: solid 1px #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap; }
+    @media screen and (min-width: 768px) {
+      .search-container .search-item {
+        flex-direction: row; } }
+    .search-container .search-item .item-img {
+      overflow: hidden;
+      height: 150px;
+      display: grid;
+      place-content: center; }
+      @media screen and (min-width: 768px) {
+        .search-container .search-item .item-img {
+          width: 525px; } }
+    .search-container .search-item .item-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 1.2em; }
+      .search-container .search-item .item-detail .item-title {
+        font-weight: 600;
+        font-size: 0.9em; }
+      .search-container .search-item .item-detail .item-desc {
+        font-family: "Helvetica-Neue-Light", sans-serif;
+        font-size: 0.9em;
+        padding: 0.5em 0; }
+      .search-container .search-item .item-detail .item-foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%; }
+        .search-container .search-item .item-detail .item-foot .item-sell {
+          font-family: "Helvetica-Neue-Medium", sans-serif;
+          font-size: 0.75em; }
+        .search-container .search-item .item-detail .item-foot .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap; }
+          .search-container .search-item .item-detail .item-foot .buttons .buy,
+          .search-container .search-item .item-detail .item-foot .buttons .item-price {
+            font-family: "Helvetica-Neue-Bold", sans-serif;
+            font-weight: 600;
+            font-size: 0.7rem;
+            background: #d35266;
+            color: #fff;
+            padding: 0.5rem 0.9rem;
+            border-radius: 2px;
+            height: auto; }
+          .search-container .search-item .item-detail .item-foot .buttons .buy {
+            margin-right: 0.6em; }
+  .search-container .search-nav {
+    padding: 1em 0 2.5em;
+    text-align: center; }
+    .search-container .search-nav .page {
+      font-family: "Helvetica-Neue-Medium", sans-serif;
+      font-size: 0.7em;
+      line-height: 1;
+      background: #fff;
+      color: #888;
+      border-radius: 3px;
+      padding: 0.2em 0.5em;
+      margin: 0 0.4em; }
+    .search-container .search-nav .active-page {
+      background: #d35266;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

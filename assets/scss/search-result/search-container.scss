@@ -1,0 +1,98 @@
+.search-num {
+  background: $color-Grey-light;
+  color: $color-Grey;
+  font-family: $font-Goth-Bold;
+  font-size: 0.75em;
+  padding: 1.2em 1.2em;
+}
+
+.search-container {
+  background: $color-Grey-light;
+  color: $color-Grey;
+  font-family: $font-Goth-Bold;
+
+  .search-item {
+    padding: 1.2em;
+    border-top: solid 1px $color-Grey;
+    border-bottom: solid 1px $color-Grey;
+
+    @include flex(column, flex-start, stretch, nowrap);
+
+    @include breakpoint($desktop-screen) {
+      flex-direction: row;
+    }
+
+    .item-img {
+      overflow: hidden;
+      height: 150px;
+
+      @include center-content;
+
+      @include breakpoint($desktop-screen) {
+        width: 525px;
+      }
+    }
+
+    .item-detail {
+      @include flex(column, space-between, flex-start);
+
+      padding: 1.2em;
+
+      .item-title {
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+
+      .item-desc {
+        font-family: $font-Helv-Light;
+        font-size: 0.9em;
+        padding: 0.5em 0;
+      }
+
+      .item-foot {
+        @include flex(row, space-between, center, nowrap);
+
+        width: 100%;
+
+        .item-sell {
+          font-family: $font-Helv-Medium;
+          font-size: 0.75em;
+        }
+
+        .buttons {
+          @include flex(row, space-between, center, nowrap);
+
+          .buy,
+          .item-price {
+            @include button;
+          }
+
+          .buy {
+            margin-right: 0.6em;
+          }
+        }
+      }
+    }
+  }
+
+  .search-nav {
+    padding: 1em 0 2.5em;
+    text-align: center;
+
+    .page {
+      font-family: $font-Helv-Medium;
+      font-size: 0.7em;
+      line-height: 1;
+      background: $color-white;
+      color: $color-Grey;
+      border-radius: 3px;
+      padding: 0.2em 0.5em;
+      margin: 0 0.4em;
+    }
+
+    .active-page {
+      background: $color-Cabaret;
+      color: $color-white;
+    }
+  }
+}

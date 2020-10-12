@@ -9,6 +9,9 @@ header {
   nav {
     background: $color-Eclipse;
     padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 
     ul {
       height: 100%;
@@ -36,6 +39,10 @@ header {
         @include logo;
       }
 
+      .active {
+        color: $color-Cabaret;
+      }
+
       .login {
         @include button();
 
@@ -51,46 +58,62 @@ header {
     }
   }
 
-  .banner {
+  .overlay {
+    .banner {
+      @include flex(column, center, center);
+
+      padding: 2em;
+      color: $color-white;
+      background-color: $color-Cabaret;
+      opacity: 0.85;
+
+      .title {
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      .desc {
+        padding-bottom: 1.5rem;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-family: $font-Helv-Medium;
+      }
+
+      .search {
+        font-size: 0.8rem;
+        color: black;
+        border-radius: 7px;
+        overflow: hidden;
+
+        .search-input,
+        .search-but {
+          background: $color-white;
+          padding: 0.6rem 0.3rem;
+          padding-right: 1.5rem;
+        }
+
+        .search-but {
+          background: $color-Eclipse;
+          color: $color-Grey-light;
+          padding: 0.6rem 0.8rem;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
     @include breakpoint($mobile-screen) {
       display: none;
     }
 
-    @include flex(column, center, center);
-
-    padding: 2em;
-    color: $color-white;
-    background-color: $color-Cabaret;
-    opacity: 0.85;
-
-    .title {
-      font-weight: 600;
-      font-size: 2.5rem;
-      text-transform: uppercase;
-    }
-
-    .desc {
-      padding-bottom: 1.5rem;
-      font-size: 0.8rem;
-      text-transform: capitalize;
-      font-family: $font-Helv-Medium;
-    }
-
-    .search {
-      font-size: 0.8rem;
-      color: black;
-      background: $color-white;
-      padding: 0.6rem 0.3rem;
-      padding-right: 1.5rem;
-      // border: solid 1px $color-Grey;
-      border-radius: 4px;
-    }
-  }
-
-  .overlay {
     background-image: url(./../img/banner.jpg);
     background-position: 50% 170%;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 48px;
   }
 }

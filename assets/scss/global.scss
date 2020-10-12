@@ -1,12 +1,17 @@
 /*
   Global Setting and methods
 */
-@mixin flex($dir:row, $justify:center, $align:center) {
+@mixin flex($dir:row, $justify:center, $align:center, $wrap: wrap) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin center-content {
+  display: grid;
+  place-content: center;
 }
 
 @mixin button($weight: 400) {
@@ -66,7 +71,11 @@ nav {
   }
 }
 
-body {
-  max-width: 1100px;
+.wrapper {
+  max-width: 1400px;
   margin: 0 auto;
+
+  @include breakpoint ($mobile-screen) {
+    padding-top: 39px;
+  }
 }

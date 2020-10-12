@@ -13,7 +13,7 @@
   .title {
     font-weight: 600;
 
-    @include flex(row, flex-start, center);
+    @include flex(row, flex-start, center);  //align icon(:before) and title
   }
 
   .category-desc {

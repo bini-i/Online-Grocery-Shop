@@ -74,6 +74,7 @@ nav {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  background: $color-Grey-light;
 
   @include breakpoint ($mobile-screen) {
     padding-top: 39px;

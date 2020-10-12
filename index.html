@@ -51,6 +51,14 @@
         <h1 class="title">Fresh Grocery</h1>
         <p class="desc">Get your favourite produce with affordable price!</p>
         <div class="search">
+          <select class="product-type" name="product-type">
+            <option value="" disabled selected>Product type</option>
+            <option value="apples">Apples</option>
+            <option value="banana">Banana</option>
+            <option value="beans">Beans</option>
+            <option value="berries">Berries</option>
+            <option value="beef">Beef</option>
+          </select>
           <input class="search-input" type="text" name="search" placeholder="What are you looking for ?">
           <a class="search-but" href="search-result.html">Search</a>
         </div>
@@ -60,6 +68,32 @@
 
   <div class="wrapper">
     <main>
+      <!-- Ads section -->
+      <section class="ads-item-container">
+        <h2>HOT ADS</h2>
+        <div class="ads-item">
+          <i class="fas fa-chevron-circle-left ads-nav-left"></i>
+          <i class="fas fa-chevron-circle-right ads-nav-right"></i>
+          <a class="item-img" href="#">
+            <img src="./assets/img/avocado.jpg" alt="banana">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Banana</a>
+            </h2>
+            <p class="item-desc">
+              Soft, sweet and delicious, the banana is a popular choice for breakfast, snacks or any time of the day. The vibrant yellow peel provides natural protection while storing, and is a great indicator of when the fruit is ready to eat!
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">Sold in bunches</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">47¢</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Catagory section -->
       <section class="category">
         <h2 class="title fruits">Fruits and Vegetables</h2>

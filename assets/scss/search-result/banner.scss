@@ -23,14 +23,15 @@
   .search {
     font-size: 0.8rem;
     color: black;
-    border-radius: 7px;
     overflow: hidden;
 
     .search-input,
-    .search-but {
+    .search-but,
+    .product-type {
       background: $color-white;
       padding: 0.6rem 0.3rem;
       padding-right: 1.5rem;
+      border: 0;
     }
 
     .search-but {

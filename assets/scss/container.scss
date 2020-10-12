@@ -23,6 +23,7 @@
   .carousel-nav-left,
   .carousel-nav-left2 {
     left: 0;
+    background: $color-Grey-light;
 
     &:hover {
       background: $color-Grey;
@@ -34,6 +35,7 @@
   .carousel-nav-right,
   .carousel-nav-right2 {
     right: 0;
+    background: $color-Grey-light;
 
     &:hover {
       background: $color-Grey;
@@ -48,7 +50,7 @@
     position: relative;
 
     @include breakpoint($desktop-screen) {
-      height: 185px;
+      height: 215px;
     }
 
     .carousel,

@@ -57,8 +57,7 @@ nav ul li:not(:first-child) a:hover {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  background: #f4f5f7;
-  transition: width 1s; }
+  background: #f4f5f7; }
   @media screen and (max-width: 767px) {
     .wrapper {
       padding-top: 39px; } }
@@ -365,6 +364,7 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 2em;
+  padding-left: 25vw;
   color: #fff;
   background-color: #d35266;
   opacity: 0.85; }
@@ -394,7 +394,7 @@ footer {
       cursor: pointer; }
 
 @media screen and (min-width: 768px) {
-  main {
+  .grid {
     display: grid;
     grid-template-columns: 1fr 3fr; } }
 

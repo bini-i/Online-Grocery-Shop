@@ -1,9 +1,41 @@
-.search-num {
-  background: $color-Grey-light;
+main {
+  @include breakpoint($desktop-screen) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.filter {
+  @include breakpoint($mobile-screen) {
+    display: none;
+  }
+
+  grid-column: 1;
   color: $color-Grey;
-  font-family: $font-Goth-Bold;
-  font-size: 0.75em;
-  padding: 1.2em 1.2em;
+  padding: 4em 1em 0;
+
+  .filter-container {
+    @include flex(column, flex-start, flex-start);
+
+    h2 {
+      font-size: 0.8em;
+      font-family: $font-Helv-Bold;
+      font-weight: 600;
+      border-bottom: solid 1px $color-Grey;
+      margin: 1em 0;
+      width: 100%;
+    }
+
+    .filter-item {
+      padding: 0.2em 0;
+
+      @include flex;
+
+      label {
+        padding-left: 0.5em;
+      }
+    }
+  }
 }
 
 .search-container {
@@ -11,10 +43,25 @@
   color: $color-Grey;
   font-family: $font-Goth-Bold;
 
+  @include breakpoint($desktop-screen) {
+    grid-column: 2;
+    border-left: solid $color-Grey 1px;
+  }
+
+  .search-num {
+    background: $color-Grey-light;
+    color: $color-Grey;
+    font-family: $font-Goth-Bold;
+    font-size: 0.75em;
+    padding: 1.2em 1.2em;
+  }
+
   .search-item {
     padding: 1.2em;
     border-top: solid 1px $color-Grey;
     border-bottom: solid 1px $color-Grey;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
 
     @include flex(column, flex-start, stretch, nowrap);
 
@@ -66,9 +113,18 @@
           }
 
           .buy {
+            display: none;
             margin-right: 0.6em;
           }
         }
+      }
+    }
+
+    &:hover {
+      background: $color-white;
+
+      .item-detail .item-foot .buttons .buy {
+        display: block;
       }
     }
   }

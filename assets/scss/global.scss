@@ -75,6 +75,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   background: $color-Grey-light;
+  transition: width 1s;
 
   @include breakpoint ($mobile-screen) {
     padding-top: 39px;

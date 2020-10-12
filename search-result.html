@@ -57,10 +57,61 @@
 
   <div class="wrapper">
     <main>
-      <div class="search-num">
-        <strong>23</strong> Results for <strong>"produce"</strong> search
-      </div>
+      <aside class="filter">
+        <div class="product-type filter-container">
+          <h2>Product Type</h2>
+          <div class="filter-item">
+            <input type="checkbox" id="apples" name="product-type">
+            <label for="apple">Apples</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="banana" name="product-type">
+            <label for="banana">Banana</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="beans" name="product-type">
+            <label for="beans">Beans</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="berries" name="product-type">
+            <label for="berries">Berries</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="beef" name="product-type">
+            <label for="beef">Beef</label>
+          </div>
+        </div>
+        <div class="new-arrival filter-container">
+          <h2>New Arrivals</h2>
+          <div class="filter-item">
+            <input type="checkbox" id="arrival" name="new-arrival" value="">
+            <label for="arrival">Apples</label>
+          </div>
+        </div>
+        <div class="price filter-container">
+          <h2>Price</h2>
+          <div class="filter-item">
+            <input type="radio" id="under1" name="product-type">
+            <label for="under1">Under $1</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="1to3" name="product-type">
+            <label for="1to3">$1 - $3</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="3to5" name="product-type">
+            <label for="3to5">$3 - $5</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="5to10" name="product-type">
+            <label for="5to10">$5 - $10</label>
+          </div>
+        </div>
+      </aside>
       <article class="search-container">
+        <div class="search-num">
+          <strong>23</strong> Results for <strong>"produce"</strong> search
+        </div>
         <section class="search-item">
           <a class="item-img" href="#">
             <img src="./assets/img/banana.jpg" alt="banana">
@@ -164,13 +215,34 @@
           </div>
         </section>
         <section class="search-nav">
-            <span class="page active-page">1</span><span class="page">2</span><span class="page">3</span><sub>...</sub><span class="page">5</span>
+          <span class="page active-page">1</span><span class="page">2</span><span class="page">3</span><sub>...</sub><span class="page">5</span>
         </section>
       </article>
     </main>
 
     <footer>
-
+      <div class="top">
+        <div class="logo">
+          <a href="#">
+            Fresh Grocery
+          </a>
+        </div>
+        <div class="social">
+          <p>Connect with us</p>
+          <a href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </div>
+        <div class="bottom">
+          <p>© 2020–2020 Fresh Grocery</p>
+        </div>
+      </div>
     </footer>
   </div>
 </body>

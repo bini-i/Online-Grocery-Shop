@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   carousel_nav_right.addEventListener('click', (e)=>{
     let slider = parseInt(carousel.style.left) || 0;
-    if (slider > carousel.childElementCount * -135/3) {
+    if (slider > carousel.childElementCount * -135/1.8) {
       carousel.style.left = (slider - 135) + 'px';
     } else {
       carousel.style.left = 0;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   carousel_nav_right2.addEventListener('click', (e)=>{
     let slider = parseInt(carousel2.style.left) || 0;
-    if (slider > carousel2.childElementCount * -135/3) {
+    if (slider > carousel2.childElementCount * -135/1.8) {
       carousel2.style.left = (slider - 135) + 'px';
     } else {
       carousel2.style.left = 0;

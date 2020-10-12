@@ -1,17 +1,19 @@
 .container {
   position: relative;
   padding: 0 1.25em;
+  margin: 1.5em 0;
 
   .carousel-nav-left,
   .carousel-nav-right,
   .carousel-nav-left2,
   .carousel-nav-right2 {
     position: absolute;
-    top: 50%;
     width: 18px;
-    height: 18px;
+    height: 100%;
     color: $color-Grey;
     z-index: 10;
+
+    @include center-content;
 
     @include breakpoint($mobile-screen) {
       display: none;
@@ -20,12 +22,24 @@
 
   .carousel-nav-left,
   .carousel-nav-left2 {
-    left: 5px;
+    left: 0;
+
+    &:hover {
+      background: $color-Grey;
+      color: $color-Grey-light;
+      cursor: pointer;
+    }
   }
 
   .carousel-nav-right,
   .carousel-nav-right2 {
     right: 0;
+
+    &:hover {
+      background: $color-Grey;
+      color: $color-Grey-light;
+      cursor: pointer;
+    }
   }
 
   .carousel-container {
@@ -34,13 +48,12 @@
     position: relative;
 
     @include breakpoint($desktop-screen) {
-      height: 240px;
+      height: 185px;
     }
 
     .carousel,
     .carousel2 {
       background-color: $color-Grey-light;
-      padding: 1.5em 0;
       font-size: 14px;
       transition: left 1s;
 

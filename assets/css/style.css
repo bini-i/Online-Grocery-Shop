@@ -56,11 +56,18 @@ nav ul li:not(:first-child) a:hover {
 
 .wrapper {
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
   background: #f4f5f7; }
   @media screen and (max-width: 767px) {
     .wrapper {
       padding-top: 39px; } }
+
+html {
+  height: 100vh; }
+
+body {
+  height: 100%; }
 
 /*
   Header section
@@ -223,17 +230,19 @@ header {
 
 .container {
   position: relative;
-  padding: 0 1.25em; }
+  padding: 0 1.25em;
+  margin: 1.5em 0; }
   .container .carousel-nav-left,
   .container .carousel-nav-right,
   .container .carousel-nav-left2,
   .container .carousel-nav-right2 {
     position: absolute;
-    top: 50%;
     width: 18px;
-    height: 18px;
+    height: 100%;
     color: #888;
-    z-index: 10; }
+    z-index: 10;
+    display: grid;
+    place-content: center; }
     @media screen and (max-width: 767px) {
       .container .carousel-nav-left,
       .container .carousel-nav-right,
@@ -242,21 +251,30 @@ header {
         display: none; } }
   .container .carousel-nav-left,
   .container .carousel-nav-left2 {
-    left: 5px; }
+    left: 0; }
+    .container .carousel-nav-left:hover,
+    .container .carousel-nav-left2:hover {
+      background: #888;
+      color: #f4f5f7;
+      cursor: pointer; }
   .container .carousel-nav-right,
   .container .carousel-nav-right2 {
     right: 0; }
+    .container .carousel-nav-right:hover,
+    .container .carousel-nav-right2:hover {
+      background: #888;
+      color: #f4f5f7;
+      cursor: pointer; }
   .container .carousel-container {
     overflow: hidden;
     background: transparent;
     position: relative; }
     @media screen and (min-width: 768px) {
       .container .carousel-container {
-        height: 240px; } }
+        height: 185px; } }
     .container .carousel-container .carousel,
     .container .carousel-container .carousel2 {
       background-color: #f4f5f7;
-      padding: 1.5em 0;
       font-size: 14px;
       transition: left 1s;
       display: flex;
@@ -521,7 +539,8 @@ footer {
       color: #888;
       border-radius: 3px;
       padding: 0.2em 0.5em;
-      margin: 0 0.4em; }
+      margin: 0 0.4em;
+      cursor: pointer; }
     .search-container .search-nav .active-page {
       background: #d35266;
       color: #fff; }

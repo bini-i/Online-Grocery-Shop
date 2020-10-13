@@ -51,7 +51,7 @@
     position: relative;
 
     @include breakpoint($desktop-screen) {
-      height: 220px;
+      height: 215px;
     }
 
     .carousel,
@@ -60,17 +60,27 @@
       font-size: 14px;
       transition: left 1s;
 
+      @include flex (row, center, center);
+
       @include breakpoint($desktop-screen) {
+        justify-content: flex-start;
         width: 500%;
         position: absolute;
         z-index: 5;
         left: 0;
       }
 
-      @include flex (row, flex-start, center);
-
       .item {
         width: 95px;
+
+        @include breakpoint($mobile-screen) {
+          width: 21%;
+        }
+
+        @include breakpoint($mobile-sm-screen) {
+          width: 33%;
+        }
+
         padding: 1em;
         margin-bottom: 1.2em;
         margin-right: 1.2em;
@@ -83,6 +93,7 @@
 
         .item-img {
           img {
+            object-fit: cover;
             width: 100%;
             height: 95px;
           }

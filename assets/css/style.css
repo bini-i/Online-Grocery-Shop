@@ -119,7 +119,8 @@ header {
         flex-wrap: wrap;
         color: #fff;
         font-weight: 600;
-        font-size: 1.2em; }
+        font-size: 1.2em;
+        text-transform: uppercase; }
         header nav ul .logo::before {
           display: block;
           content: "";
@@ -480,44 +481,76 @@ header {
 footer {
   font-family: "Helvetica-Neue-Medium", sans-serif;
   font-size: 14px;
-  padding: 1em;
+  padding: 1em 0;
   background: #fff;
   color: #888; }
   footer .top {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    border-top: solid 1px #888;
+    padding: 1.2em 4vw; }
+    @media screen and (min-width: 768px) {
+      footer .top {
+        flex-direction: row; } }
     footer .top .logo {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.2em;
+      padding-bottom: 0.7em;
       font-size: 1.1em;
       color: #888; }
-      footer .top .logo::before {
-        display: block;
-        content: "";
-        background: url("./../img/icont.png") no-repeat;
-        background-size: contain;
-        height: 1.6em;
-        width: 1.6em;
-        padding-right: 0.5em; }
-    footer .top .social p {
-      padding: 0.4em 0; }
-    footer .top .social i {
-      padding-right: 0.4em; }
-    footer .top .bottom {
-      width: 100%;
-      border-top: solid 1px #888;
-      margin-top: 0.3em;
-      padding-top: 0.3em;
-      font-size: 0.8em; }
+      footer .top .logo a {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: #888; }
+        footer .top .logo a::before {
+          display: block;
+          content: "";
+          background: url("./../img/icont.png") no-repeat;
+          background-size: contain;
+          height: 1.6em;
+          width: 1.6em;
+          padding-right: 0.5em; }
+      footer .top .logo .desc {
+        padding-top: 0.4em;
+        font-family: "Helvetica-Neue-Light", sans-serif;
+        font-size: 0.9em; }
+    footer .top .categories {
+      padding-bottom: 0.7em; }
+      footer .top .categories h3 {
+        color: #d35266;
+        padding-bottom: 0.5em;
+        border-bottom: solid 1px #d35266; }
+      footer .top .categories li {
+        padding-top: 0.5em;
+        font-family: "Gotham-Bold", sans-serif;
+        font-size: 0.9em; }
+    footer .top .social {
+      padding-bottom: 1em; }
+      footer .top .social i {
+        padding-right: 0.4em; }
+  footer .bottom {
+    border-top: solid 1px #888;
+    margin-top: 0.3em;
+    padding: 1.2em 4vw;
+    font-family: "Helvetica-Neue-Medium", sans-serif;
+    font-size: 0.9em;
+    text-align: center; }
+    footer .bottom .ref {
+      color: #d35266;
+      text-decoration: underline; }
 
 .banner-s {
   display: flex;
@@ -581,6 +614,7 @@ footer {
       font-family: "Helvetica-Neue-Bold", sans-serif;
       font-weight: 600;
       border-bottom: solid 1px #888;
+      padding-bottom: 0.5em;
       margin: 1em 0;
       width: 100%; }
     .filter .filter-container .filter-item {

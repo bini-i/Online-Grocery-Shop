@@ -1,0 +1,76 @@
+footer {
+  font-family: $font-Helv-Medium;
+  font-size: 14px;
+  padding: 1em 0;
+  background: $color-white;
+  color: $color-Grey;
+
+  .top {
+    @include flex(column, space-between, flex-start);
+
+    @include breakpoint($desktop-screen) {
+      flex-direction: row;
+    }
+
+    border-top: solid 1px $color-Grey;
+    padding: 1.2em 4vw;
+
+    .logo {
+      @include flex(column, flex-start, flex-start);
+
+      padding-bottom: 0.7em;
+      font-size: 1.1em;
+      color: $color-Grey;
+
+      a {
+        @include logo;
+
+        color: $color-Grey;
+      }
+
+      .desc {
+        padding-top: 0.4em;
+        font-family: $font-Helv-Light;
+        font-size: 0.9em;
+      }
+    }
+
+    .categories {
+      padding-bottom: 0.7em;
+
+      h3 {
+        color: $color-Cabaret;
+        padding-bottom: 0.5em;
+        border-bottom: solid 1px $color-Cabaret;
+      }
+
+      li {
+        padding-top: 0.5em;
+        font-family: $font-Goth-Bold;
+        font-size: 0.9em;
+      }
+    }
+
+    .social {
+      padding-bottom: 1em;
+
+      i {
+        padding-right: 0.4em;
+      }
+    }
+  }
+
+  .bottom {
+    border-top: solid 1px $color-Grey;
+    margin-top: 0.3em;
+    padding: 1.2em 4vw;
+    font-family: $font-Helv-Medium;
+    font-size: 0.9em;
+    text-align: center;
+
+    .ref {
+      color: $color-Cabaret;
+      text-decoration: underline;
+    }
+  }
+}

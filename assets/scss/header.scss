@@ -1,0 +1,136 @@
+/*
+  Header section
+*/
+
+header {
+  font-size: 10px;
+
+  @include breakpoint($desktop-screen) {
+    font-size: 14px;
+  }
+
+  font-family: $font-Helv-Bold;
+
+  nav {
+    background: $color-Eclipse;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    ul {
+      height: 100%;
+      padding-left: 0.5em;
+
+      @include flex();
+
+      li {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        padding-right: 4vw;
+        color: $color-Grey;
+
+        .text {
+          @include breakpoint($mobile-sm-screen) {
+            display: none;
+          }
+        }
+
+        @include breakpoint($mobile-sm-screen) {
+          font-size: 1.5em;
+          padding-right: 8vw;
+        }
+
+        @include breakpoint ($desktop-screen) {
+          font-size: 1em;
+          padding-right: 3.5vw;
+        }
+
+        i {
+          padding-right: 1vw;
+        }
+      }
+
+      .logo {
+        @include logo;
+      }
+
+      .active {
+        color: $color-Cabaret;
+      }
+
+      .login {
+        @include button();
+
+        &,
+        button {
+          cursor: pointer;
+        }
+
+        @include breakpoint($mobile-screen) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    .banner {
+      @include flex(column, center, center);
+
+      padding: 2em;
+      color: $color-white;
+      background-color: $color-Cabaret;
+      opacity: 0.85;
+
+      .title {
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      .desc {
+        padding-bottom: 1.5rem;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-family: $font-Helv-Medium;
+      }
+
+      .search {
+        font-size: 0.8rem;
+        color: $color-Grey;
+        overflow: hidden;
+
+        .search-input,
+        .search-but,
+        .product-type {
+          background: $color-white;
+          padding: 0.6rem 0.3rem;
+          padding-right: 1.5rem;
+          border: 0;
+        }
+
+        .search-but {
+          background: $color-Eclipse;
+          color: $color-Grey-light;
+          padding: 0.6rem 0.8rem;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($mobile-screen) {
+      display: none;
+    }
+
+    background-image: url(./../img/banner.jpg);
+    background-position: 50% 170%;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 48px;
+  }
+}

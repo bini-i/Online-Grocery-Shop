@@ -1,0 +1,156 @@
+.grid {
+  @include breakpoint($desktop-screen) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.filter {
+  color: $color-Grey;
+  grid-column: 1;
+  padding: 4em 1em 0;
+
+  @include breakpoint($mobile-screen) {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+  }
+
+  .filter-container {
+    @include flex(column, flex-start, flex-start);
+
+    h2 {
+      font-size: 0.8em;
+      font-family: $font-Helv-Bold;
+      font-weight: 600;
+      border-bottom: solid 1px $color-Grey;
+      padding-bottom: 0.5em;
+      margin: 1em 0;
+      width: 100%;
+    }
+
+    .filter-item {
+      padding: 0.2em 0;
+
+      @include flex;
+
+      label {
+        padding-left: 0.5em;
+      }
+    }
+  }
+}
+
+.search-container {
+  background: $color-Grey-light;
+  color: $color-Grey;
+  font-family: $font-Goth-Bold;
+
+  @include breakpoint($desktop-screen) {
+    grid-column: 2;
+    border-left: solid $color-Grey 1px;
+  }
+
+  .search-num {
+    background: $color-Grey-light;
+    color: $color-Grey;
+    font-family: $font-Goth-Bold;
+    font-size: 0.75em;
+    padding: 1.2em 1.2em;
+  }
+
+  .search-item {
+    padding: 1.2em;
+    border-top: solid 1px $color-Grey;
+    border-bottom: solid 1px $color-Grey;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+
+    @include flex(column, flex-start, stretch, nowrap);
+
+    @include breakpoint($desktop-screen) {
+      flex-direction: row;
+    }
+
+    .item-img {
+      overflow: hidden;
+      min-width: 200px;
+      height: 150px;
+
+      @include center-content;
+    }
+
+    .item-detail {
+      @include flex(column, space-between, flex-start);
+
+      padding: 1.2em;
+      flex-grow: 1;
+
+      .item-title {
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+
+      .item-desc {
+        font-family: $font-Helv-Light;
+        font-size: 0.9em;
+        padding: 0.5em 0;
+      }
+
+      .item-foot {
+        @include flex(row, space-between, center, nowrap);
+
+        width: 100%;
+
+        .item-sell {
+          font-family: $font-Helv-Medium;
+          font-size: 0.75em;
+        }
+
+        .buttons {
+          @include flex(row, space-between, center, nowrap);
+
+          .buy,
+          .item-price {
+            @include button;
+          }
+
+          .buy {
+            display: none;
+            margin-right: 0.6em;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background: $color-white;
+
+      .item-detail .item-foot .buttons .buy {
+        display: block;
+      }
+    }
+  }
+
+  .search-nav {
+    padding: 1em 0 2.5em;
+    text-align: center;
+
+    .page {
+      font-family: $font-Helv-Medium;
+      font-size: 0.7em;
+      line-height: 1;
+      background: $color-white;
+      color: $color-Grey;
+      border-radius: 3px;
+      padding: 0.2em 0.5em;
+      margin: 0 0.4em;
+      cursor: pointer;
+    }
+
+    .active-page {
+      background: $color-Cabaret;
+      color: $color-white;
+    }
+  }
+}

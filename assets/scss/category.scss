@@ -1,0 +1,36 @@
+.category {
+  @include flex(row, flex-start, center);
+
+  box-sizing: border-box;
+  padding: 0.65em 3vw 0.3em;
+  border-bottom: solid 1px $color-Grey;
+  background: $color-Grey-light;
+  font-family: $font-Goth-Bold;
+  font-size: 0.75em;
+  color: $color-Grey;
+
+  .title {
+    font-weight: 600;
+
+    @include flex(row, flex-start, center);  //align icon(:before) and title
+  }
+
+  .category-desc {
+    padding-left: 3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .fruits::before {
+    background: url("./../img/vegetable.jpg");
+
+    @include icon-circular;
+  }
+
+  .meats::before {
+    background: url("./../img/meat.jpg");
+
+    @include icon-circular;
+  }
+}

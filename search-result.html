@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Fresh Grocery | Online Grocery Shop</title>
+  <link rel="icon" href="./assets/img/icont.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- fontawesome script -->
+  <script src="https://kit.fontawesome.com/2bce053742.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="logo">
+          <a href="index.html">
+            Fresh Grocery
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <i class="fas fa-home"></i>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-th"></i>
+            <span class="text">Category</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="search-result.html">
+            <i class="fas fa-search"></i>
+            <span class="text">Search</span>
+          </a>
+        </li>
+        <li class="login">
+          <button type="button" name="button">LOG IN</button>
+        </li>
+      </ul>
+    </nav>
+    <div class="overlay">
+      <section class="banner-s">
+        <h1 class="title">Fresh Grocery</h1>
+        <p class="desc">Get your favourite produce with affordable price!</p>
+        <div class="search">
+          <select class="product-type" name="product-type">
+            <option value="" disabled selected>Product type</option>
+            <option value="apples">Apples</option>
+            <option value="banana">Banana</option>
+            <option value="beans">Beans</option>
+            <option value="berries">Berries</option>
+            <option value="beef">Beef</option>
+          </select>
+          <input class="search-input" type="text" value="produce" name="search" placeholder="What are you looking for ?">
+          <a class="search-but" href="search-result.html">Search</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <main class="grid">
+      <aside class="filter">
+        <div class="product-type filter-container">
+          <h2>Product Type</h2>
+          <div class="filter-item">
+            <input type="checkbox" id="apples" name="product-type">
+            <label for="apples">Apples</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="banana" name="product-type">
+            <label for="banana">Banana</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="beans" name="product-type">
+            <label for="beans">Beans</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="berries" name="product-type">
+            <label for="berries">Berries</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" id="beef" name="product-type">
+            <label for="beef">Beef</label>
+          </div>
+        </div>
+        <div class="new-arrival filter-container">
+          <h2>New Arrivals</h2>
+          <div class="filter-item">
+            <input type="checkbox" id="arrival" name="new-arrival" value="">
+            <label for="arrival">Apples</label>
+          </div>
+        </div>
+        <div class="price filter-container">
+          <h2>Price</h2>
+          <div class="filter-item">
+            <input type="radio" id="under1" name="product-type">
+            <label for="under1">Under $1</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="1to3" name="product-type">
+            <label for="1to3">$1 - $3</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="3to5" name="product-type">
+            <label for="3to5">$3 - $5</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" id="5to10" name="product-type">
+            <label for="5to10">$5 - $10</label>
+          </div>
+        </div>
+      </aside>
+      <div class="search-container">
+        <div class="search-num">
+          <strong>23</strong> Results for <strong>"produce"</strong> search
+        </div>
+        <section class="search-item">
+          <a class="item-img" href="#">
+            <img src="./assets/img/banana.jpg" alt="banana">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Banana</a>
+            </h2>
+            <p class="item-desc">
+              Soft, sweet and delicious, the banana is a popular choice for breakfast, snacks or any time of the day. The vibrant yellow peel provides natural protection while storing, and is a great indicator of when the fruit is ready to eat!
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">Sold in bunches</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">47¢</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="search-item">
+          <a class="item-img" href="#">
+            <img src="./assets/img/strawberry.jpg" alt="strawberry">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Strawberries</a>
+            </h2>
+            <p class="item-desc">
+              Sweet & succulent. Blitz with low fat yogurt and oats for a super smoothie.
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">1 lb</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">$3.97</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="search-item">
+          <a class="item-img" href="#">
+            <img src="./assets/img/spinach.jpg" alt="spinach">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Spinach</a>
+            </h2>
+            <p class="item-desc">
+              Spinach is a widely cultivated edible Asian plant of the goosefoot family, with large, dark green leaves that are eaten raw or cooked as a vegetable. Add layers of spinach to your next lasagna recipe. Pine nuts are a great addition to
+              cooked spinach. Spinach salads are a classic easy and delicious meal or side dish.
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">1 bunch</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">$4.67</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="search-item">
+          <a class="item-img" href="#">
+            <img src="./assets/img/onion.jpg" alt="onion">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Onion</a>
+            </h2>
+            <p class="item-desc">
+              Yellow Onions are sweet and astringent in flavour. The longer you cook them the sweeter they taste. These versatile onions can be used for a variety of recipes.
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">3 lb container</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">$2.47</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="search-item">
+          <a class="item-img" href="#">
+            <img src="./assets/img/avocado.jpg" alt="avocado">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Avocado</a>
+            </h2>
+            <p class="item-desc">
+              As part of guacamole, in a salad or on a bun, avocados can be used in a wide variety of recipes. In many South American countries, avocados are added to milkshakes, made into juice and are a staple for many dips. Many salads also use
+              chopped up avocados in combination with tomatoes, onions and olives.
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">pack of 5</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">$4.97</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="search-nav">
+          <span class="page active-page">1</span><span class="page">2</span><span class="page">3</span><sub>...</sub><span class="page">5</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="top">
+        <div class="logo">
+          <a href="#">
+            Fresh Grocery
+          </a>
+          <span class="desc">
+            A place where you can find fresh grocery items at affordable price!
+          </span>
+        </div>
+        <div class="categories">
+          <h3>CATEGORIES</h3>
+          <ul>
+            <li>
+              <a href="#">Fruits</a>
+            </li>
+            <li>
+              <a href="#">Vegetables</a>
+            </li>
+            <li>
+              <a href="#">Meats</a>
+            </li>
+            <li>
+              <a href="#">Seafoods</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social">
+          <p>Connect with us</p>
+          <a href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Copyright© 2020–2020 Fresh Grocery. All&nbsp;Rights&nbsp;Reserved. <br>
+          Designed by <a class="ref" href="https://www.behance.net/gallery/24796463/ZATTIX">Mohammed Awad</a>.
+          Developed&nbsp;by&nbsp; <a class="ref" href="https://github.com/bini-i">Binyam&nbsp;Hailemeskel</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

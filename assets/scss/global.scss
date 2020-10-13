@@ -1,0 +1,93 @@
+/*
+  Global Setting and methods
+*/
+@mixin flex($dir:row, $justify:center, $align:center, $wrap: wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin center-content {
+  display: grid;
+  place-content: center;
+}
+
+@mixin button($weight: 400) {
+  font-family: $font-Helv-Bold;
+  font-weight: 600;
+  font-size: 0.7rem;
+  background: $color-Cabaret;
+  color: $color-white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+  height: auto;
+}
+
+@mixin icon-circular {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 60% 20%;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-size: 3em 3em;
+  margin-right: 1em;
+}
+
+@mixin logo {
+  @include flex(row, flex-start, center);
+
+  color: $color-white;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-transform: uppercase;
+
+  &::before {
+    display: block;
+    content: "";
+    background: url("./../img/icont.png") no-repeat;
+    background-size: contain;
+    height: 1.6em;
+    width: 1.6em;
+    padding-right: 0.5em;
+  }
+}
+
+@mixin breakpoint ($size) {
+  @media screen and #{$size} {
+    @content;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+nav {
+  ul li:not(:first-child) a:hover {
+    color: $color-Cabaret;
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background: $color-Grey-light;
+
+  @include breakpoint ($mobile-screen) {
+    padding-top: 39px;
+  }
+}
+
+main {
+  background: $color-Grey-light;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}

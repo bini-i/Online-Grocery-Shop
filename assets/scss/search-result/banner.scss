@@ -1,0 +1,44 @@
+.banner-s {
+  @include flex(column, center, flex-start);
+
+  padding: 2em;
+  padding-left: 25vw;
+  color: $color-white;
+  background-color: $color-Cabaret;
+  opacity: 0.85;
+
+  .title {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .desc {
+    padding-bottom: 1.5rem;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    font-family: $font-Helv-Medium;
+  }
+
+  .search {
+    font-size: 0.8rem;
+    color: black;
+    overflow: hidden;
+
+    .search-input,
+    .search-but,
+    .product-type {
+      background: $color-white;
+      padding: 0.6rem 0.3rem;
+      padding-right: 1.5rem;
+      border: 0;
+    }
+
+    .search-but {
+      background: $color-Grey;
+      color: $color-Grey-light;
+      padding: 0.6rem 0.8rem;
+      cursor: pointer;
+    }
+  }
+}

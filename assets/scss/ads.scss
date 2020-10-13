@@ -1,0 +1,98 @@
+.ads-item-container {
+  @include breakpoint($mobile-screen) {
+    display: none;
+  }
+
+  padding: 1em 10vw;
+  font-family: $font-Goth-Bold;
+
+  h2 {
+    font-size: 0.75em;
+    color: $color-Grey;
+    margin-bottom: -0.2em;
+  }
+
+  .ads-item {
+    position: relative;
+
+    .ads-nav-left,
+    .ads-nav-right {
+      color: $color-white;
+      background: $color-Cabaret;
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(1.4);
+      cursor: pointer;
+    }
+
+    .ads-nav-left {
+      left: -30px;
+    }
+
+    .ads-nav-right {
+      right: -30px;
+    }
+
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+
+    @include flex(column, flex-start, center, nowrap);
+
+    @include breakpoint($desktop-screen) {
+      flex-direction: row;
+    }
+
+    .item-img {
+      overflow: hidden;
+      min-width: 200px;
+      height: 150px;
+
+      @include center-content;
+    }
+
+    .item-detail {
+      @include flex(column, space-between, flex-start);
+
+      padding: 1.2em;
+      flex-grow: 1;
+
+      .item-title {
+        color: $color-Cabaret;
+        font-weight: 600;
+        font-size: 1em;
+        padding-bottom: 0.2em;
+      }
+
+      .item-desc {
+        font-family: $font-Helv-Light;
+        font-size: 0.9em;
+        padding: 0.5em 0;
+      }
+
+      .item-foot {
+        @include flex(column, space-between, flex-start, nowrap);
+
+        width: 100%;
+
+        .item-sell {
+          font-family: $font-Helv-Medium;
+          font-size: 0.75em;
+          margin-bottom: 1em;
+        }
+
+        .buttons {
+          @include flex(row, space-between, center, nowrap);
+
+          .buy,
+          .item-price {
+            @include button;
+          }
+
+          .buy {
+            margin-right: 0.6em;
+          }
+        }
+      }
+    }
+  }
+}

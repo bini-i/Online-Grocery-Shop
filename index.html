@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Fresh Grocery | Online Grocery Shop</title>
+  <link rel="icon" href="./assets/img/icont.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- fontawesome script -->
+  <script src="./assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/2bce053742.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li class="logo">
+          <a href="index.html">
+            Fresh Grocery
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <i class="fas fa-home"></i>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-th"></i>
+            <span class="text">Category</span>
+          </a>
+        </li>
+        <li>
+          <a href="search-result.html">
+            <i class="fas fa-search"></i>
+            <span class="text">Search</span>
+          </a>
+        </li>
+        <li class="login">
+          <button type="button" name="button">LOG IN</button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Banner section -->
+    <div class="overlay">
+      <section class="banner">
+        <h1 class="title">Fresh Grocery</h1>
+        <p class="desc">Get your favourite produce with affordable price!</p>
+        <div class="search">
+          <select class="product-type" name="product-type">
+            <option value="" disabled selected>Product type</option>
+            <option value="apples">Apples</option>
+            <option value="banana">Banana</option>
+            <option value="beans">Beans</option>
+            <option value="berries">Berries</option>
+            <option value="beef">Beef</option>
+          </select>
+          <input class="search-input" type="text" name="search" placeholder="What are you looking for ?">
+          <a class="search-but" href="search-result.html">Search</a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <main>
+      <!-- Ads section -->
+      <section class="ads-item-container">
+        <h2>HOT ADS</h2>
+        <div class="ads-item">
+          <i class="fas fa-chevron-circle-left ads-nav-left"></i>
+          <i class="fas fa-chevron-circle-right ads-nav-right"></i>
+          <a class="item-img" href="#">
+            <img src="./assets/img/avocado.jpg" alt="banana">
+          </a>
+          <div class="item-detail">
+            <h2 class="item-title">
+              <a href="#">Avocado</a>
+            </h2>
+            <p class="item-desc">
+              As part of guacamole, in a salad or on a bun, avocados can be used in a wide variety of recipes. In many South American countries, avocados are added to milkshakes, made into juice and are a staple for many dips. Many salads also use
+              chopped up avocados in combination with tomatoes, onions and olives.
+            </p>
+            <div class="item-foot">
+              <p class="item-sell">Sold in bunches</p>
+              <div class="buttons">
+                <button class="buy" type="button" name="button">Buy</button>
+                <button class="item-price" type="button" name="button">$4.97</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Catagory section -->
+      <section class="category">
+        <h2 class="title fruits">Fruits and Vegetables</h2>
+        <p class="category-desc">Vegetables, Fruits, Frozen Alternatives, Fresh Herbs, Salad Kits</p>
+      </section>
+      <!-- Container for grocery items -->
+      <div class="container">
+        <i class="fas fa-chevron-left carousel-nav-left"></i>
+        <i class="fas fa-chevron-right carousel-nav-right"></i>
+        <div class="carousel-container">
+          <div class="carousel">
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/banana.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Banana</a>
+              </h2>
+              <p class="item-desc">Sold in bunches</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">47¢</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/strawberry.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Strawberries</a>
+              </h2>
+              <p class="item-desc">1 lb</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$3.97</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/avocado.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Avocado</a>
+              </h2>
+              <p class="item-desc">Pack of 5</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.97</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/onion.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Onion</a>
+              </h2>
+              <p class="item-desc">3 lb bag</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$2.47</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/tomato.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Tomato</a>
+              </h2>
+              <p class="item-desc">1 lb container</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.97</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/spinach.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Spinach</a>
+              </h2>
+              <p class="item-desc">1 bunch</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.67</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/banana.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Banana</a>
+              </h2>
+              <p class="item-desc">Sold in bunches</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">47¢</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/strawberry.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Strawberries</a>
+              </h2>
+              <p class="item-desc">1 lb</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$3.97</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/avocado.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Avocado</a>
+              </h2>
+              <p class="item-desc">Pack of 5</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.97</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/onion.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Onion</a>
+              </h2>
+              <p class="item-desc">3 lb bag</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$2.47</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/tomato.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Tomato</a>
+              </h2>
+              <p class="item-desc">1 lb container</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.97</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/spinach.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Spinach</a>
+              </h2>
+              <p class="item-desc">1 bunch</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$4.67</p>
+              </div>
+            </section>
+            <div class="see-more">
+              <p>
+                See More
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Catagory section  -->
+      <section class="category">
+        <h2 class="title meats">Meat and Seafoods</h2>
+        <p class="category-desc">Chicken, Fillets, Salmon</p>
+      </section>
+      <!-- Container for grocery items -->
+      <div class="container">
+        <i class="fas fa-chevron-left carousel-nav-left2"></i>
+        <i class="fas fa-chevron-right carousel-nav-right2"></i>
+        <div class="carousel-container">
+          <div class="carousel2">
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/chicken.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Chicken Breasts</a>
+              </h2>
+              <p class="item-desc">850 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$11</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/ground-beef.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Lean Ground Beef</a>
+              </h2>
+              <p class="item-desc">1 kg</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$15.76</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/pork.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Pork Boneless Loin</a>
+              </h2>
+              <p class="item-desc">900 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$11.96</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/steak.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Beef Striploin Steak</a>
+              </h2>
+              <p class="item-desc">1 Steak</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$9.42</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/sausage.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Pork Sausages</a>
+              </h2>
+              <p class="item-desc">1.20 kg</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$10</p>
+              </div>
+            </section>
+            <section class="item">
+              <a class="item-img" href="#">
+                <img src="./assets/img/fillet.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Tilapia Fillets</a>
+              </h2>
+              <p class="item-desc">400 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$8.35</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/chicken.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Chicken Breasts</a>
+              </h2>
+              <p class="item-desc">850 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$11</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/ground-beef.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Lean Ground Beef</a>
+              </h2>
+              <p class="item-desc">1 kg</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$15.76</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/pork.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Pork Boneless Loin</a>
+              </h2>
+              <p class="item-desc">900 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$11.96</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/steak.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Beef Striploin Steak</a>
+              </h2>
+              <p class="item-desc">1 Steak</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$9.42</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/sausage.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Pork Sausages</a>
+              </h2>
+              <p class="item-desc">1.20 kg</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$10</p>
+              </div>
+            </section>
+            <section class="item hide">
+              <a class="item-img" href="#">
+                <img src="./assets/img/fillet.jpg" alt="">
+              </a>
+              <h2 class="item-title">
+                <a href="#">Tilapia Fillets</a>
+              </h2>
+              <p class="item-desc">400 g</p>
+              <div class="item-foot">
+                <i class="far fa-plus-square"></i>
+                <p class="item-price">$8.35</p>
+              </div>
+            </section>
+            <div class="see-more2">
+              <p>
+                See More
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="top">
+        <div class="logo">
+          <a href="#">
+            Fresh Grocery
+          </a>
+          <span class="desc">
+            A place where you can find fresh grocery items at affordable price!
+          </span>
+        </div>
+        <div class="categories">
+          <h3>CATEGORIES</h3>
+          <ul>
+            <li>
+              <a href="#">Fruits</a>
+            </li>
+            <li>
+              <a href="#">Vegetables</a>
+            </li>
+            <li>
+              <a href="#">Meats</a>
+            </li>
+            <li>
+              <a href="#">Seafoods</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social">
+          <p>Connect with us</p>
+          <a href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Copyright© 2020–2020 Fresh Grocery. All&nbsp;Rights&nbsp;Reserved. <br>
+          Designed by <a class="ref" href="https://www.behance.net/gallery/24796463/ZATTIX">Mohammed Awad</a>.
+          Developed&nbsp;by&nbsp; <a class="ref" href="https://github.com/bini-i">Binyam&nbsp;Hailemeskel</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

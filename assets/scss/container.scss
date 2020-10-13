@@ -138,7 +138,13 @@
           display: none;
         }
 
-        @include button;
+        @include flex(row, center, center);
+
+        flex-basis: 100%;
+
+        p {
+          @include button;
+        }
       }
     }
   }

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // main page carousel navigation
   let carousel_nav_left = document.querySelector('.carousel-nav-left');
   let carousel_nav_right = document.querySelector('.carousel-nav-right');
   let carousel = document.querySelector('.carousel');
@@ -39,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  let see_more = document.querySelector('.see-more');
+  //main page see more functionality
+  let see_more = document.querySelector('.see-more p');
   let nodes = document.querySelectorAll('.carousel .hide')
   see_more.addEventListener('click', (e) => {
     nodes.forEach((node) => {
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     see_more.innerText == "See More" ? see_more.innerText = "See Less" : see_more.innerText = "See More";
   });
 
-  let see_more2 = document.querySelector('.see-more2');
+  let see_more2 = document.querySelector('.see-more2 p');
   let nodes2 = document.querySelectorAll('.carousel2 .hide')
   see_more2.addEventListener('click', (e) => {
     nodes2.forEach((node) => {

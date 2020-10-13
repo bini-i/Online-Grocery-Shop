@@ -45,11 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nodes.forEach((node) => {
       node.classList.toggle('hide');
     })
-    if(see_more.innerText == "See More") {
-      see_more.innerText = "See Less";
-    }else {
-      see_more.innerText == "See More";
-    }
+    see_more.innerText == "See More" ? see_more.innerText = "See Less" : see_more.innerText = "See More";
   });
 
   let see_more2 = document.querySelector('.see-more2');
@@ -58,10 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nodes2.forEach((node) => {
       node.classList.toggle('hide');
     })
-    if(see_more2.innerText == "See More") {
-      see_more2.innerText = "See Less";
-    }else {
-      see_more2.innerText == "See More";
-    }
+    see_more2.innerText == "See More" ? see_more2.innerText = "See Less" : see_more2.innerText = "See More";
   });
 });

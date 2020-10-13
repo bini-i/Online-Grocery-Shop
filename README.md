@@ -30,8 +30,8 @@ The project consists of the following components:
 
 - HTML5
 - CSS3
-- sass
-- javascript
+- Sass
+- JavaScript
 
 ## Live Demo
 

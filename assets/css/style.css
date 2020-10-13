@@ -94,10 +94,17 @@ header {
       align-items: center;
       flex-wrap: wrap; }
       header nav ul li {
-        font-size: 0.8em;
+        font-size: 1.2em;
         text-transform: uppercase;
-        padding-right: 2vw;
+        padding-right: 4vw;
         color: #888; }
+        @media screen and (max-width: 425px) {
+          header nav ul li .text {
+            display: none; } }
+        @media screen and (max-width: 425px) {
+          header nav ul li {
+            font-size: 1.5em;
+            padding-right: 8vw; } }
         @media screen and (min-width: 768px) {
           header nav ul li {
             font-size: 1em;
@@ -555,12 +562,14 @@ footer {
     grid-template-columns: 1fr 3fr; } }
 
 .filter {
-  grid-column: 1;
   color: #888;
+  grid-column: 1;
   padding: 4em 1em 0; }
   @media screen and (max-width: 767px) {
     .filter {
-      display: none; } }
+      display: flex;
+      justify-content: space-around;
+      padding-top: 1em; } }
   .filter .filter-container {
     display: flex;
     flex-direction: column;

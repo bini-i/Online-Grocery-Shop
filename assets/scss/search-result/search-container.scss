@@ -6,13 +6,15 @@
 }
 
 .filter {
-  @include breakpoint($mobile-screen) {
-    display: none;
-  }
-
-  grid-column: 1;
   color: $color-Grey;
+  grid-column: 1;
   padding: 4em 1em 0;
+
+  @include breakpoint($mobile-screen) {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+  }
 
   .filter-container {
     @include flex(column, flex-start, flex-start);

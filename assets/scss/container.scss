@@ -125,6 +125,21 @@
           }
         }
       }
+
+      .hide {
+        @include breakpoint($mobile-screen) {
+          display: none;
+        }
+      }
+
+      .see-more,
+      .see-more2 {
+        @include breakpoint($desktop-screen) {
+          display: none;
+        }
+
+        @include button;
+      }
     }
   }
 }

@@ -433,6 +433,28 @@ header {
             font-family: "Helvetica-Neue-Bold", sans-serif;
             font-weight: 600;
             color: #d35266; }
+      @media screen and (max-width: 767px) {
+        .container .carousel-container .carousel .hide,
+        .container .carousel-container .carousel2 .hide {
+          display: none; } }
+      .container .carousel-container .carousel .see-more,
+      .container .carousel-container .carousel .see-more2,
+      .container .carousel-container .carousel2 .see-more,
+      .container .carousel-container .carousel2 .see-more2 {
+        font-family: "Helvetica-Neue-Bold", sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+        background: #d35266;
+        color: #fff;
+        padding: 0.5rem 0.9rem;
+        border-radius: 2px;
+        height: auto; }
+        @media screen and (min-width: 768px) {
+          .container .carousel-container .carousel .see-more,
+          .container .carousel-container .carousel .see-more2,
+          .container .carousel-container .carousel2 .see-more,
+          .container .carousel-container .carousel2 .see-more2 {
+            display: none; } }
 
 footer {
   font-family: "Helvetica-Neue-Medium", sans-serif;

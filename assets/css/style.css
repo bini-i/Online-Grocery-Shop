@@ -66,6 +66,10 @@ nav ul li:not(:first-child) a:hover {
 main {
   background: #f4f5f7; }
 
+body {
+  padding: 0;
+  margin: 0; }
+
 /*
   Header section
 */

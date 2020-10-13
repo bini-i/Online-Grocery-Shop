@@ -4,18 +4,20 @@
 
 > Online Grocerry Shop website
 
+This project is the final capstone project for the HTML/CSS curriculum at Microverse made based on the design template made by [Mohammed Awad](https://www.behance.net/gallery/24796463/ZATTIX)
+
 ![screenshot](./assets/img/app_screenshot2.png)
 
-This project is the final capstone project for HTML/CSS curriculum at Microverse made based on the design template made by Mohammed Awad (https://www.behance.net/gallery/24796463/ZATTIX)
+## Project Description
 
-It consists of the following components: 
+The project consists of the following components:
 - Two webpages (main and search-result)
 - breakpoints at two screen width:
     * less than 768px(mobile screen)
     * greater than 768px(desktop screen)
 - Header section that locks into fixed position when scrolling
 - Banner section that only displays on desktop screen
-- main page 
+- main page
     * list of grocery items with flex display (mobile screen)
     * list of grocery items on carousel with navigation button (desktop screen)
 - search-result page
@@ -53,7 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Mohammed Awad (https://www.behance.net/gallery/24796463/ZATTIX)
+- This project is the final capstone project for the HTML/CSS curriculum at Microverse made based on the design template made by [Mohammed Awad](https://www.behance.net/gallery/24796463/ZATTIX)
 
 ## 📝 License
 

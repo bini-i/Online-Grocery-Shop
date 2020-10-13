@@ -2,3 +2,4 @@ node_modules/
 .gitmessage
 .hintrc
 .stylelintrc.json
+.sass-cache

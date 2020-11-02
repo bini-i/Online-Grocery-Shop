@@ -2,7 +2,7 @@
   @include flex(row, flex-start, center);
 
   @include breakpoint($desktop-screen) {
-    font-size: 0.9em;;
+    font-size: 0.9em;
   }
 
   box-sizing: border-box;

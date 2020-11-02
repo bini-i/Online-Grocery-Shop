@@ -66,7 +66,7 @@
       .flickity-prev-next-button.previous {
         left: -16px;
         background: $color-Grey-light;
-      
+
         &:hover {
           background: $color-Cabaret;
           cursor: pointer;
@@ -104,17 +104,18 @@
         border-radius: 0;
       }
 
-      &:after {
+      &::after {
         content: 'flickity';
         display: none;
       }
 
       @include breakpoint($mobile-screen) {
-        &:after {
-          content: '';  
+        &::after {
+          content: '';
         }
 
         @include flex (row, center, center);
+
         justify-content: flex-start;
       }
 
@@ -125,7 +126,7 @@
           width: 29%;
           box-sizing: border-box;
         }
-        
+
         @include breakpoint($mobile-sm-screen) {
           width: 46%;
           box-sizing: border-box;
@@ -192,7 +193,7 @@
         }
       }
 
-      .see-more{
+      .see-more {
         @include breakpoint($desktop-screen) {
           display: none;
         }

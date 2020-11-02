@@ -30,11 +30,21 @@
     background: url("./../img/vegetable.jpg");
 
     @include icon-circular;
+
+    @include breakpoint($desktop-screen) {
+      width: 3em;
+      height: 3em;
+    }
   }
 
   .meats::before {
     background: url("./../img/meat.jpg");
 
     @include icon-circular;
+
+    @include breakpoint($desktop-screen) {
+      width: 3em;
+      height: 3em;
+    }
   }
 }

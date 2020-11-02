@@ -208,6 +208,8 @@ header {
   @media screen and (max-width: 767px) {
     .ads-item-container {
       display: none; } }
+  .ads-item-container .main-carousel .flickity-button {
+    display: none; }
   .ads-item-container .main-carousel .carousel-cell {
     width: 100%; }
   .ads-item-container h2 {
@@ -330,6 +332,10 @@ header {
     border-radius: 50%;
     background-size: 3em 3em;
     margin-right: 1em; }
+    @media screen and (min-width: 768px) {
+      .category .fruits::before {
+        width: 3em;
+        height: 3em; } }
   .category .meats::before {
     background: url("./../img/meat.jpg");
     content: "";
@@ -341,6 +347,10 @@ header {
     border-radius: 50%;
     background-size: 3em 3em;
     margin-right: 1em; }
+    @media screen and (min-width: 768px) {
+      .category .meats::before {
+        width: 3em;
+        height: 3em; } }
 
 .container {
   position: relative;
@@ -392,7 +402,9 @@ header {
     .container .carousel-container .main-carousel {
       width: 100%;
       background-color: #f4f5f7;
-      font-size: 14px; }
+      font-size: 14px;
+      /* position dots up a bit */
+      /* dots are lines */ }
       .container .carousel-container .main-carousel .flickity-button-icon {
         fill: #d35266; }
       .container .carousel-container .main-carousel .flickity-prev-next-button.previous {
@@ -411,6 +423,13 @@ header {
           cursor: pointer; }
           .container .carousel-container .main-carousel .flickity-prev-next-button.next:hover svg {
             fill: #f4f5f7; }
+      .container .carousel-container .main-carousel .flickity-page-dots {
+        bottom: -22px; }
+      .container .carousel-container .main-carousel .flickity-page-dots .dot {
+        height: 4px;
+        width: 40px;
+        margin: 0;
+        border-radius: 0; }
       .container .carousel-container .main-carousel:after {
         content: 'flickity';
         display: none; }

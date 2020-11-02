@@ -4,6 +4,10 @@
   }
 
   .main-carousel {
+    .flickity-button {
+      display: none;
+    }
+
     .carousel-cell {
       width: 100%;
     }

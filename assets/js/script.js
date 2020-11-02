@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //main page see more functionality
+//   //main page see more functionality
   let see_more = document.querySelector('.see-more p');
   let nodes = document.querySelectorAll('.carousel .hide')
   see_more.addEventListener('click', (e) => {

@@ -64,7 +64,8 @@ nav ul li:not(:first-child) a:hover {
       padding-top: 39px; } }
 
 main {
-  background: #f4f5f7; }
+  background: #f4f5f7;
+  overflow: hidden; }
 
 body {
   padding: 0;
@@ -194,11 +195,14 @@ header {
         display: none; } }
 
 .ads-item-container {
+  font-family: "Gotham-Bold", sans-serif;
   padding: 1em 10vw;
-  font-family: "Gotham-Bold", sans-serif; }
+  margin-bottom: 15px; }
   @media screen and (max-width: 767px) {
     .ads-item-container {
       display: none; } }
+  .ads-item-container .main-carousel .carousel-cell {
+    width: 100%; }
   .ads-item-container h2 {
     font-size: 0.75em;
     color: #888;

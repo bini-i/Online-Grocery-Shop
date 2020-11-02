@@ -3,8 +3,15 @@
     display: none;
   }
 
-  padding: 1em 10vw;
+  .main-carousel {
+    .carousel-cell {
+      width: 100%;
+    }
+  }
+
   font-family: $font-Goth-Bold;
+  padding: 1em 10vw;
+  margin-bottom: 15px;
 
   h2 {
     font-size: 0.75em;

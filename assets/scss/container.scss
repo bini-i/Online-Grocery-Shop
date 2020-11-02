@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  padding: 0 1.25em;
+  padding: 0 1.1em;
   margin: 1.5em 0;
   background: $color-Grey-light;
 
@@ -46,9 +46,7 @@
   }
 
   .carousel-container {
-    // overflow: hidden;
     background: transparent;
-    // position: relative;
     display: grid;
     place-items: center;
 
@@ -56,35 +54,70 @@
       height: 215px;
     }
 
-    .carousel,
-    .carousel2 {
+    .main-carousel {
       width: 100%;
       background-color: $color-Grey-light;
       font-size: 14px;
-      // transition: left 1s;
 
-      @include flex (row, center, center);
+      .flickity-button-icon {
+        fill: $color-Cabaret;
+      }
 
-      @include breakpoint($desktop-screen) {
+      .flickity-prev-next-button.previous {
+        left: -16px;
+        background: $color-Grey-light;
+
+        &:hover {
+          background: $color-Cabaret;
+          cursor: pointer;
+
+          svg {
+            fill: $color-Grey-light;
+          }
+        }
+      }
+
+      .flickity-prev-next-button.next {
+        right: -16px;
+        background: $color-Grey-light;
+
+        &:hover {
+          background: $color-Cabaret;
+          cursor: pointer;
+
+          svg {
+            fill: $color-Grey-light;
+          }
+        }
+      }
+
+      &:after {
+        content: 'flickity';
+        display: none;
+      }
+
+      @include breakpoint($mobile-screen) {
+        &:after {
+          content: '';  
+        }
+
+        @include flex (row, center, center);
         justify-content: flex-start;
-        // width: 500%;
-        // position: absolute;
-        // z-index: 5;
-        // left: 0;
       }
 
-      .main-carousel {
-        width: 100%;
-      }
       .item {
         width: 95px;
 
         @include breakpoint($mobile-screen) {
-          width: 21%;
+          width: 29%;
+          box-sizing: border-box;
         }
-
+        
         @include breakpoint($mobile-sm-screen) {
-          width: 33%;
+          width: 46%;
+          box-sizing: border-box;
+          padding: 0.7em;
+          margin-right: 0.5em;
         }
 
         padding: 1em;
@@ -146,8 +179,7 @@
         }
       }
 
-      .see-more,
-      .see-more2 {
+      .see-more{
         @include breakpoint($desktop-screen) {
           display: none;
         }

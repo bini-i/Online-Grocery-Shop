@@ -375,7 +375,9 @@ header {
   .container .carousel-container {
     overflow: hidden;
     background: transparent;
-    position: relative; }
+    position: relative;
+    display: grid;
+    place-items: center; }
     @media screen and (min-width: 768px) {
       .container .carousel-container {
         height: 215px; } }
@@ -419,6 +421,10 @@ header {
           .container .carousel-container .carousel .item,
           .container .carousel-container .carousel2 .item {
             width: 33%; } }
+        @media screen and (min-width: 768px) {
+          .container .carousel-container .carousel .item,
+          .container .carousel-container .carousel2 .item {
+            margin-bottom: 0; } }
         .container .carousel-container .carousel .item .item-img img,
         .container .carousel-container .carousel2 .item .item-img img {
           object-fit: cover;

@@ -1,6 +1,10 @@
 .category {
   @include flex(row, flex-start, center);
 
+  @include breakpoint($desktop-screen) {
+    font-size: 0.9em;;
+  }
+
   box-sizing: border-box;
   padding: 0.65em 3vw 0.3em;
   border-bottom: solid 1px $color-Grey;

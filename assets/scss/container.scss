@@ -46,9 +46,9 @@
   }
 
   .carousel-container {
-    overflow: hidden;
+    // overflow: hidden;
     background: transparent;
-    position: relative;
+    // position: relative;
     display: grid;
     place-items: center;
 
@@ -58,20 +58,24 @@
 
     .carousel,
     .carousel2 {
+      width: 100%;
       background-color: $color-Grey-light;
       font-size: 14px;
-      transition: left 1s;
+      // transition: left 1s;
 
       @include flex (row, center, center);
 
       @include breakpoint($desktop-screen) {
         justify-content: flex-start;
-        width: 500%;
-        position: absolute;
-        z-index: 5;
-        left: 0;
+        // width: 500%;
+        // position: absolute;
+        // z-index: 5;
+        // left: 0;
       }
 
+      .main-carousel {
+        width: 100%;
+      }
       .item {
         width: 95px;
 
@@ -128,6 +132,10 @@
             font-family: $font-Helv-Bold;
             font-weight: 600;
             color: $color-Cabaret;
+          }
+
+          i {
+            font-size: 1.25em;
           }
         }
       }

@@ -75,7 +75,19 @@ header {
   }
 
   .overlay {
-    .banner {
+    .banner { 
+
+      animation: slide 3s forwards;
+
+      @keyframes slide {
+        0% {
+          transform: translateX(75%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
       @include flex(column, center, center);
 
       padding: 2em;
@@ -126,7 +138,7 @@ header {
     @include breakpoint($mobile-screen) {
       display: none;
     }
-
+    
     background-image: url(./../img/banner.jpg);
     background-position: 50% 170%;
     background-size: cover;

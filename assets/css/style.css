@@ -154,6 +154,7 @@ header {
     background-attachment: fixed;
     padding-top: 48px; }
     header .overlay .banner {
+      animation: slide 3s forwards;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -163,6 +164,11 @@ header {
       color: #fff;
       background-color: #d35266;
       opacity: 0.85; }
+@keyframes slide {
+  0% {
+    transform: translateX(75%); }
+  100% {
+    transform: translateX(0); } }
       header .overlay .banner .title {
         font-weight: 600;
         font-size: 2rem;
@@ -297,6 +303,9 @@ header {
   font-family: "Gotham-Bold", sans-serif;
   font-size: 0.75em;
   color: #888; }
+  @media screen and (min-width: 768px) {
+    .category {
+      font-size: 0.9em; } }
   .category .title {
     font-weight: 600;
     display: flex;
@@ -373,9 +382,7 @@ header {
       color: #f4f5f7;
       cursor: pointer; }
   .container .carousel-container {
-    overflow: hidden;
     background: transparent;
-    position: relative;
     display: grid;
     place-items: center; }
     @media screen and (min-width: 768px) {
@@ -383,9 +390,9 @@ header {
         height: 215px; } }
     .container .carousel-container .carousel,
     .container .carousel-container .carousel2 {
+      width: 100%;
       background-color: #f4f5f7;
       font-size: 14px;
-      transition: left 1s;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -394,11 +401,10 @@ header {
       @media screen and (min-width: 768px) {
         .container .carousel-container .carousel,
         .container .carousel-container .carousel2 {
-          justify-content: flex-start;
-          width: 500%;
-          position: absolute;
-          z-index: 5;
-          left: 0; } }
+          justify-content: flex-start; } }
+      .container .carousel-container .carousel .main-carousel,
+      .container .carousel-container .carousel2 .main-carousel {
+        width: 100%; }
       .container .carousel-container .carousel .item,
       .container .carousel-container .carousel2 .item {
         width: 95px;
@@ -455,6 +461,9 @@ header {
             font-family: "Helvetica-Neue-Bold", sans-serif;
             font-weight: 600;
             color: #d35266; }
+          .container .carousel-container .carousel .item .item-foot i,
+          .container .carousel-container .carousel2 .item .item-foot i {
+            font-size: 1.25em; }
       @media screen and (max-width: 767px) {
         .container .carousel-container .carousel .hide,
         .container .carousel-container .carousel2 .hide {
